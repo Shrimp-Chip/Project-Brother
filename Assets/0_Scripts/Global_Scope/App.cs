@@ -8,6 +8,5 @@ public class App
     public static void Bootstrap() 
     {
         GameModeManager.Instance.DressScene(SceneManager.GetActiveScene().name);
-        AudioManager.Instance.CreateSources();
     }
 }

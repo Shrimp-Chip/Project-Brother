@@ -45,7 +45,6 @@ public class GlobalManagersEditor : EditorWindow
         {
             GameModeManager.Instance,
             SceneLoader.Instance,
-            AudioManager.Instance
         };
     }
     private void DrawInspectorSelect()
