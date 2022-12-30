@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
 
-public class Transition_Fade : SceneTransitionPlayer
+public class Transition_Fade : TransitionBehaviour
 {
     [Header("References")]
     [SerializeField] private Image _panel;

@@ -45,6 +45,7 @@ public class GlobalManagersEditor : EditorWindow
         {
             GameModeManager.Instance,
             SceneLoader.Instance,
+            AudioManager.Instance
         };
     }
     private void DrawInspectorSelect()
@@ -67,7 +68,7 @@ public class GlobalManagersEditor : EditorWindow
     }
     private void ShowSelectedEditor(int inspectorIndex)
     {
-        _currentEditor.OnInspectorGUI();
+        _currentEditor?.OnInspectorGUI();
     }
     private void SetSelectedEditor(int inspectorIndex)
     {
