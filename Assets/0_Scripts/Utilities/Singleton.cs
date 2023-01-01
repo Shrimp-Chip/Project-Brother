@@ -15,7 +15,6 @@ public abstract class Singleton<T> : MonoBehaviour where T : MonoBehaviour
     }
 }
 
-
 public abstract class GlobalManager<T> : ScriptableObject where T : ScriptableObject
 {
     public static T Instance { get

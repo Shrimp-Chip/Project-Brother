@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7926f97814a145a478b8edc0a341b687, type: 3}
+  m_Name: UI_Group
+  m_EditorClassIdentifier: 
+  _references:
+  - Key: Okay
+    Value:
+      Guid:
+        Data1: -1840800105
+        Data2: 1164219590
+        Data3: -1091619938
+        Data4: 1253267948
+      Path: event:/UI/Okay

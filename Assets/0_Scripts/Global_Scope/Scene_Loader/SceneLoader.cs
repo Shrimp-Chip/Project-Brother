@@ -11,8 +11,9 @@ using System.Linq;
 public class SceneLoader : GlobalManager<SceneLoader>
 {
     public string ScenePath;
+    public Action OnSceneLoad;
 
-    public List<Pair<SceneTransition, SceneTransitionPlayer>> SceneTransitions = new List<Pair<SceneTransition, SceneTransitionPlayer>>();
+    public List<Pair<SceneTransition, TransitionBehaviour>> SceneTransitions = new List<Pair<SceneTransition, TransitionBehaviour>>();
     public async Task LoadScene(SceneAsset sa, SceneTransition transition = SceneTransition.Standard) => await LoadSceneAsync(sa.name, transition);
     public async Task LoadScene(Scene scene, SceneTransition transition = SceneTransition.Standard) => await LoadSceneAsync(scene.name, transition);
     private async Task LoadSceneAsync(string sceneName, SceneTransition transition = SceneTransition.Standard)
@@ -33,7 +34,7 @@ public class SceneLoader : GlobalManager<SceneLoader>
             return loadingOperation.progress >= 0.9f; // Progress is haulted at 0.9 because we set allowSceneActivation to false
         }));
         // Add transition task
-        SceneTransitionPlayer transitionPlayer = GetTransitionPlayer(transition);
+        TransitionBehaviour transitionPlayer = GetTransitionPlayer(transition);
         if (transitionPlayer != null) loadingTasks.Add(transitionPlayer.EnterTransition());
         // Wait until both the loading and the transition tasks are complete
         await Task.WhenAll(loadingTasks);
@@ -46,6 +47,8 @@ public class SceneLoader : GlobalManager<SceneLoader>
         SceneManager.UnloadSceneAsync(oldManagerScene);
         // Wait until next frame to allow for dependencies to be built
         await Task.Yield();
+        OnSceneLoad?.Invoke();
+
 
         // OPEN NEW SCENE
         // Allow transition
@@ -62,10 +65,10 @@ public class SceneLoader : GlobalManager<SceneLoader>
         if (transitionPlayer != null) await transitionPlayer.ExitTransition();
     }
 
-    private SceneTransitionPlayer GetTransitionPlayer(SceneTransition transition)
+    private TransitionBehaviour GetTransitionPlayer(SceneTransition transition)
     {
-        SceneTransitionPlayer player = SceneTransitions.FirstOrDefault(x => x.Key == transition).Value;
-        SceneTransitionPlayer playerObject = Instantiate(player, Vector3.zero, Quaternion.identity);
+        TransitionBehaviour player = SceneTransitions.FirstOrDefault(x => x.Key == transition).Value;
+        TransitionBehaviour playerObject = Instantiate(player, Vector3.zero, Quaternion.identity);
         DontDestroyOnLoad(playerObject);
         return playerObject;
     }

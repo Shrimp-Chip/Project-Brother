@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bec37012878ccfd44aefa650533fc6af, type: 3}
   m_Name: G_Audio_Manager
   m_EditorClassIdentifier: 
-  _masterVolume: 0
-  _musicVolume: 0
-  _VFXVolume: 0
-  _musicTracks:
-  - {fileID: 11400000, guid: 02131a777c704e94487bcc0403882c25, type: 2}
-  - {fileID: 11400000, guid: 02131a777c704e94487bcc0403882c25, type: 2}
-  _musicIntensity: 0
-  _soundEffects:
-  - {fileID: 11400000, guid: 7ff1e93afe86f6e48b3c78b539a7a1e1, type: 2}
-  - {fileID: 11400000, guid: 7ff1e93afe86f6e48b3c78b539a7a1e1, type: 2}
+  _audioGroupsByType:
+  - Key: 0
+    Value: {fileID: 11400000, guid: decd9f97206e3e6478a34d4922532bbe, type: 2}
+  - Key: 1
+    Value: {fileID: 11400000, guid: a7ee1677ce7d4bf4090072e1baa40e2e, type: 2}
+  - Key: 2
+    Value: {fileID: 11400000, guid: dad1f9b454b979e4db8dfcc80ddf53e1, type: 2}
+  - Key: 3
+    Value: {fileID: 11400000, guid: 14658818e119ec64b9aefdb222120f91, type: 2}
+  _defaultSongTransitionDuration: 1

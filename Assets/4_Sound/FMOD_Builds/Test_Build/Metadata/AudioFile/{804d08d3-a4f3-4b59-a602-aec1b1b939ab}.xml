@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{804d08d3-a4f3-4b59-a602-aec1b1b939ab}">
+		<property name="assetPath">
+			<value>Ambience/City/ambience_city_walla_pad.ogg</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>50</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{9e8ebb7e-7495-45d6-b7b6-352ba4617b7a}</destination>
+		</relationship>
+	</object>
+</objects>
