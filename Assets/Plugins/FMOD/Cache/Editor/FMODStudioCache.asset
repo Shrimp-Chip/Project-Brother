@@ -15,7 +15,7 @@ MonoBehaviour:
   Path: Assets/4_Sound/FMOD_Builds/FMOD_Example/Build/Desktop/Dialogue_JP.bank
   Name: Dialogue_JP
   StudioPath: bank:/Dialogue_JP
-  lastModified: 638079586750000000
+  lastModified: 638086129280000000
   FileSizes:
   - Name: Desktop
     Value: 66560
@@ -300,7 +300,7 @@ MonoBehaviour:
   Path: Assets/4_Sound/FMOD_Builds/FMOD_Example/Build/Desktop/Dialogue_CN.bank
   Name: Dialogue_CN
   StudioPath: bank:/Dialogue_CN
-  lastModified: 638079586750000000
+  lastModified: 638086129280000000
   FileSizes:
   - Name: Desktop
     Value: 52416
@@ -428,7 +428,7 @@ MonoBehaviour:
   Path: Assets/4_Sound/FMOD_Builds/FMOD_Example/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 638079586750000000
+  lastModified: 638086129280000000
   FileSizes:
   - Name: Desktop
     Value: 10454368
@@ -908,7 +908,7 @@ MonoBehaviour:
   - {fileID: 1422314511240692072}
   StringsBanks:
   - {fileID: 4882345178187214248}
-  cacheTime: 638079586750000000
+  cacheTime: 638086129280000000
   cacheVersion: 131601
 --- !u!114 &131763305351303307
 MonoBehaviour:
@@ -1116,7 +1116,7 @@ MonoBehaviour:
   Path: Assets/4_Sound/FMOD_Builds/FMOD_Example/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638079586750000000
+  lastModified: 638086129280000000
   FileSizes:
   - Name: Desktop
     Value: 15592
@@ -1136,7 +1136,7 @@ MonoBehaviour:
   Path: Assets/4_Sound/FMOD_Builds/FMOD_Example/Build/Desktop/Dialogue_EN.bank
   Name: Dialogue_EN
   StudioPath: bank:/Dialogue_EN
-  lastModified: 638079586750000000
+  lastModified: 638086129280000000
   FileSizes:
   - Name: Desktop
     Value: 61120
@@ -1356,7 +1356,7 @@ MonoBehaviour:
   Path: Assets/4_Sound/FMOD_Builds/FMOD_Example/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638079586750000000
+  lastModified: 638086129280000000
   FileSizes:
   - Name: Desktop
     Value: 4014
@@ -1429,7 +1429,7 @@ MonoBehaviour:
   Path: Assets/4_Sound/FMOD_Builds/FMOD_Example/Build/Desktop/VO.bank
   Name: VO
   StudioPath: bank:/VO
-  lastModified: 638079586750000000
+  lastModified: 638086129280000000
   FileSizes:
   - Name: Desktop
     Value: 38624
@@ -1476,7 +1476,7 @@ MonoBehaviour:
   Path: Assets/4_Sound/FMOD_Builds/FMOD_Example/Build/Desktop/Vehicles.bank
   Name: Vehicles
   StudioPath: bank:/Vehicles
-  lastModified: 638079586750000000
+  lastModified: 638086129280000000
   FileSizes:
   - Name: Desktop
     Value: 222464
@@ -1575,7 +1575,7 @@ MonoBehaviour:
   Path: Assets/4_Sound/FMOD_Builds/FMOD_Example/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638079586750000000
+  lastModified: 638086129280000000
   FileSizes:
   - Name: Desktop
     Value: 21580064
