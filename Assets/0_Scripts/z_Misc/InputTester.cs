@@ -1,13 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class InputTester : MonoBehaviour
 {
-    [InputPath] public string Input;
+    [field: InputPath] public string Input;
 
     void Update()
     {
-        Debug.Log(InputManager.Instance.GetContextByPath(Input));
+
     }
 }

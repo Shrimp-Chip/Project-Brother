@@ -11,5 +11,7 @@ public class App
 
         // Kinda icky but the best way to do this
         SceneLoader.Instance.OnSceneLoad += AudioManager.Instance.Cleanup;
+
+        InputManager.Instance.Initialize();
     }
 }
