@@ -15,6 +15,6 @@ MonoBehaviour:
   MasterActionAsset: {fileID: -944628639613478452, guid: fd7b7a027a0fc804abe4e930b42f6d37, type: 3}
   _joinButton: Misc/Join
   _exitButton: Misc/Disconnect
-  AllowPlayersToJoin: 0
+  AllowPlayersToJoin: 1
   _devices: []
   _playerDevices: []

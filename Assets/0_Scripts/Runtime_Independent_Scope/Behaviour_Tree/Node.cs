@@ -6,24 +6,35 @@ public abstract class Node : ScriptableObject
 {
     [field : SerializeField] public int Priority { get; private set; } = 0;
     [field : SerializeField] public Node Parent = null;
-    [field : SerializeField] public List<Node> Children { get; private set; } = new List<Node>();
     [field : SerializeField] public BehaviourState State { get; private set; } = BehaviourState.SUCCESS;
 
+    [SerializeField] private bool _started = false;
+
     #region Abstract Methods
-    public abstract bool Evaluate();
     protected abstract void OnEnter();
-    protected abstract void Update();
-    protected abstract bool IsDone();
+    protected abstract BehaviourState OnUpdate();
+    protected abstract void OnStop();
+    public abstract Node GetActiveNode();
     #endregion
 
     #region Generic Methods
-    public void AddChildren(params Node[] behaviours)
+    public BehaviourState Update()
     {
-        for(int i = 0; i < behaviours.Length; i++)
+        if (_started == false)
         {
-            behaviours[i].Parent = this;
-            Children.Add(behaviours[i]);
+            OnEnter();
+            _started = true;
         }
+
+        State = OnUpdate();
+
+        if (State == BehaviourState.FAILURE || State == BehaviourState.SUCCESS)
+        {
+            OnStop();
+            _started = false;
+        }
+
+        return State;
     }
     #endregion
 
